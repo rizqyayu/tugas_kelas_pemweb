@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Berita - Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Header Dashboard: Sapaan & Logout -->
+        <header class="dashboard-header">
+            <div>
+                <h2>🌸 Dashboard Portal</h2>
+                <p>Selamat datang, <strong id="namaPengguna">Mahasiswa</strong>!</p>
+            </div>
+            <button type="button" id="logoutButton" class="btn-logout">Logout (Keluar)</button>
+        </header>
+
+        <!-- Kotak Info Public API -->
+        <section class="api-info-section">
+            <div class="api-info-header">
+                <div>
+                    <h3>📰 Berita Terkini Hari Ini</h3>
+                    <p class="api-badge">Sumber: Public News API (Memerlukan Internet)</p>
+                </div>
+                <button type="button" id="btnRefresh" class="btn-refresh">🔄 Muat Ulang</button>
+            </div>
+
+            <!-- Wadah Kartu Berita -->
+            <div id="newsContainer" class="news-grid">
+                <p class="status-info">Memuat data berita...</p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Modal Pop-up Detail Berita Sederhana -->
+    <div id="newsModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button type="button" class="modal-close" onclick="tutupModal()">&times;</button>
+            <img id="modalImg" src="" alt="Thumbnail Berita" class="modal-img">
+            <span id="modalDate" class="modal-date"></span>
+            <h3 id="modalTitle" class="modal-title"></h3>
+            <p id="modalDesc" class="modal-desc"></p>
+            <div class="modal-footer">
+                <button type="button" class="btn-close-modal" onclick="tutupModal()">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Pengelola Sesi Login & Logout -->
+    <script src="dashboard.js"></script>
+
+    <!-- Script Public API Berita -->
+    <script src="api.js"></script>
+
+</body>
+</html>

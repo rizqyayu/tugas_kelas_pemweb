@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Login</h2>
+        <p>Silakan masuk ke akun Anda</p>
+
+        <!-- Kotak notifikasi pesan sukses / error -->
+        <div id="loginMessage" class="alert-message"></div>
+
+        <!-- Form Login -->
+        <form id="loginForm">
+            <label for="loginEmail">Email</label>
+            <input 
+                type="email" 
+                id="loginEmail" 
+                placeholder="Masukkan email" 
+                required
+            >
+
+            <label for="loginPassword">Password</label>
+            <input 
+                type="password" 
+                id="loginPassword" 
+                placeholder="Masukkan password" 
+                required
+            >
+
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Link menuju halaman Registrasi -->
+        <p class="link">
+            Belum punya akun? 
+            <a href="register.html">Daftar di sini</a>
+        </p>
+    </div>
+
+    <!-- Hubungkan ke script.js -->
+    <script src="script.js"></script>
+
+</body>
+</html>
